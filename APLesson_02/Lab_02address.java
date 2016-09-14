@@ -14,4 +14,4 @@ public class Lab_02address
 
 	}
 }
-//Prints concated address
+//Prints address
