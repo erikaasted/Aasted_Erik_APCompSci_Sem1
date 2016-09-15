@@ -13,3 +13,5 @@ public class RudeAI
 		System.out.println("You entered " + num);
 	}
 }
+//this works, just need to get jdk working
+//scanner not importing?
