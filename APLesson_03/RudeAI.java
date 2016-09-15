@@ -15,3 +15,5 @@ public class RudeAI
 }
 //this works, just need to get jdk working
 //scanner not importing?
+
+//solution is to just run thorugh console, forget in-editor console
