@@ -1,16 +1,17 @@
 import java.util.Scanner;
 
-public class Circle_Area
+public class circleArea
 {
 	public static void main(String[]args)
 	{
 		
 		Scanner kb = new Scanner(System.in);
-		double pi = 3.141592653;
-		System.out.print("What is the radius of the circle?");
 
+		System.out.print("What is the radius of the circle?");
 		double radius = kb.nextDouble();
 		kb.nextLine();
+
+		double pi = 3.141592653;
 		
 		double circleArea = (pi * (radius * radius));
 		System.out.println("The area of the circle is " + circleArea);
