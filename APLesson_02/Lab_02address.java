@@ -10,7 +10,7 @@ public class Lab_02address
 		String zipcode = "92130";
 
 
-		System.out.println(firstname +" "+ lastname +" "+ address +" "+ city +" "+ state +" "+ zipcode);
+		System.out.println(firstname +" "+ lastname +"\n"+ address +"\n"+ city +", "+ state +" "+ zipcode);
 
 	}
 }
