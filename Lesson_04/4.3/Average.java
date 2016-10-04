@@ -2,35 +2,37 @@ import java.util.Scanner;
 
 public class Average
 {
+	static double num1, num2, num3;
+	static double avg;
+
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
-		Average average = new Average();
 
 		System.out.println("Enter the first number:");
-		double num1 = kb.nextDouble();
+		num1 = kb.nextDouble();
 		kb.nextLine();
 
 		System.out.println("Enter the second number:");
-		double num2 = kb.nextDouble();
+		num2 = kb.nextDouble();
 		kb.nextLine();
 
 		System.out.println("Enter the third number:");
-		double num3 = kb.nextDouble();
+		num3 = kb.nextDouble();
 		kb.nextLine();
 
-		double avg = average.calcAverage(num1, num2, num3);
+		average();
 
-		average.print(avg);
+		print();
 
 	}
 
-	public double calcAverage(double num1, double num2, double num3)
+	public static void average()
 	{
-		return (num1 + num2 + num3) / 3;
+		avg = (num1 + num2 + num3) / 3;
 	}
 
-	public static void print(double avg)
+	public static void print()
 	{
 		System.out.printf("The average is %.4f", avg);
 	}

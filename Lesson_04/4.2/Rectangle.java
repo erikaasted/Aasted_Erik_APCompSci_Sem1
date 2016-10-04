@@ -2,32 +2,31 @@ import java.util.Scanner;
 
 public class Rectangle
 {
-	static double l, w;
-	static double perimeter;
 
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
+		Rectangle rectangle = new Rectangle();
 
 		System.out.println("What is the length?");
-		l = kb.nextDouble();
+		double l = kb.nextDouble();
 		kb.nextLine();
 		System.out.println("What is the width?");
-		w = kb.nextDouble();
+		double w = kb.nextDouble();
 		kb.nextLine();
 
-		calcPerim();
 
-		print();
+		double perimeter = rectangle.calcPerim(l, w);
+		rectangle.print(perimeter);
 	}
 
-	public static void calcPerim()
+	public double calcPerim(double l, double w)
 	{
-		perimeter = 2 * (l + w);
+		return 2 * (l + w);
 	}
 
-	public static void print()
+	public static void print(double perimeter)
 	{
-		System.out.println("The perimeter is " + perimeter);
+		System.out.printf("The average is %.4f", perimeter);
 	}
 }
