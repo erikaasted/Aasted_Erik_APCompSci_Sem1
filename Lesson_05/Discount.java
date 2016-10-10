@@ -53,19 +53,20 @@ public class Discount
 
 	public static void format()
 	{
-		System.out.println("<<<<<<<<<<< Receipt >>>>>>>>>>>>>>");
-		System.out.printf("%9s ................. $%.2f\n", item1name, item1cost);
-		System.out.printf("%9s ................. $%.2f\n", item2name, item2cost);
-		System.out.printf("%9s ................. $%.2f\n", item3name, item3cost);
-		System.out.printf("%9s ................. $%.2f\n", item4name, item4cost);
-		System.out.println("__________________________________");
-		System.out.printf("%9s ................. $%.2f\n", "Subltotal", subtotal);
-		System.out.printf("%9s ................. $%.2f\n", "Discount", discount);
-		System.out.printf("%9s ................. %.2s%%\n", "Tax", "8");
-		System.out.println("__________________________________\n");
-		System.out.printf("%9s ................. $%.2f\n", "Total", total);
-		System.out.println("__________________________________\n");
-		System.out.println("____________THANK YOU_____________\n");
+		double formatteddiscount = (discount * 100);
+
+		System.out.println("<<<<<<<<<<<< Receipt >>>>>>>>>>>>>>");
+		System.out.printf("%10s .............. $%8.2f\n", item1name, item1cost);
+		System.out.printf("%10s .............. $%8.2f\n", item2name, item2cost);
+		System.out.printf("%10s .............. $%8.2f\n", item3name, item3cost);
+		System.out.printf("%10s .............. $%8.2f\n", item4name, item4cost);
+		System.out.println("___________________________________");
+		System.out.printf("%10s .............. $%8.2f\n", "Subltotal", subtotal);
+		System.out.printf("%10s .............. %8.0f%%\n", "Discount", formatteddiscount);
+		System.out.printf("%10s .............. %8s%%\n", "Tax", "8");
+		System.out.println("___________________________________\n");
+		System.out.printf("%10s .............. $%,8.2f\n", "Total", total);
+		System.out.println("_____________THANK YOU_____________\n");
 
 
 	}
