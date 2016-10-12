@@ -24,28 +24,3 @@ public class Dice
 			System.out.println("It's a tie! You both rolled " + player + "\n");
 	}
 }
-
-
-
-
-
-
-
-//main() method
-//Set the player roll integer to a random number between 1 and 6
-//Set the computer roll integer to a random number between 1 and 6
-
-
-//Run rollDice()
-
-
-//Print “You rolled a <your roll>”
-//Print “Computer rolled a <computer’s roll>”
-//Print “The winner is <winner>”
-
-
-//rollDice() method
-//If you roll higher than the computer
-//   Winner is you 
-//If computer rolls higher
-//   Winner is computer
