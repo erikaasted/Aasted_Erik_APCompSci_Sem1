@@ -27,5 +27,3 @@ public class DigitAdder
 		}
 	}
 }
-
-//i have no idea how but this works
