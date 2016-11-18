@@ -16,7 +16,7 @@ public class ReverseWord
 
 		for (int i=0; i < words.length; i++)
 		{
-			System.out.println((i+1) + ": " + words[i]);
+			System.out.println(words[i]);
 		}
 
 		System.out.println(" ");
@@ -28,9 +28,12 @@ public class ReverseWord
 
 	}
 
-	public static void reverse(String words)
+	public static void reverse(String [] words)
 	{
-		
+		for (int i = words.length - 1 ; i >= 0; i--)
+		{
+			System.out.println(words[i]);
+		}
 	}
 }
 
