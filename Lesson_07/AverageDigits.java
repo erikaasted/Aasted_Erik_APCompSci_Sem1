@@ -25,7 +25,7 @@ public class AverageDigits
 		{
 			digits += 1;
 			average += (num % 10);
-			System.out.println(average);
+			//System.out.println(average);?
 			num /= 10;
 		}
 
