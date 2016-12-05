@@ -15,6 +15,7 @@ public class GetOdds
 		printArray();
 		System.out.printf("\nThese are the odd numbers: ");
 		System.out.printf(getOdds(numbers));
+		System.out.printf("\n");
 
 	}
 
