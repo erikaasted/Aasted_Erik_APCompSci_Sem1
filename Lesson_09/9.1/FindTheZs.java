@@ -7,7 +7,10 @@ public class FindTheZs
 		words = new String[5];
 
 		fillStringArray();
+		System.out.printf("Of the following words: "); 
 		printArray();
+		System.out.printf("\nThese have Zs: %s", hasZs());
+		System.out.printf("\n");
 	}
 
 	public static void fillStringArray()
@@ -26,15 +29,21 @@ public class FindTheZs
 		{
 			System.out.printf("%s ", words[i]);
 		}
+		System.out.printf("\n");
 	}
 
-	public static void hasZs()
+	public static String hasZs()
 	{
-		String zs
-		for (int i : words.length)
+		String zs = "";
+		for (int i=0; i < words.length; i++)
 		{
-			if (words[i].indexOf("z") >= 0 || words[i].indexOf("Z") >= 0
+			if (words[i].indexOf("z") >= 0 || words[i].indexOf("Z") >= 0)
+			{
+				zs += words[i];
+				zs += " ";
+			}
 		}
+		return zs;
 	}
 }
 
