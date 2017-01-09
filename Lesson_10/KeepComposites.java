@@ -11,7 +11,41 @@ public class KeepComposites
 		ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(numbers));
 
 		System.out.println(nums);
+
+		removePrimes(nums);
+
+		System.out.println(nums);
 	}
 
-	public static void 
+	public static int gFactor(int n)
+	{
+		for (int i = 2; i < n; i++)
+		{
+			if (n % i == 0)
+			{
+				return 1;
+			}
+		}
+		return 0;
+	}
+
+	public static void removePrimes(ArrayList<Integer> nums)
+	{
+		for (int i = 0; i < nums.size(); i++)
+		{
+			if (gFactor(nums.get(i)) == 0)
+			{
+				nums.remove(i);
+				i--;
+			}
+		}
+	}
 }
+
+
+
+
+
+
+
+
