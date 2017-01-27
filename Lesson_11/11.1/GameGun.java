@@ -16,13 +16,13 @@ public class GameGun
 		while (bulletCount > 0 || shotCount > 0)
 		{
 			System.out.println("Action: ");
-			String action = kb.nextLine();
+			String action = kb.next();
 
-			if (action == "R")
+			if (action.equals("r"))
 			{
 				reload();
 			}
-			else if (action == "S")
+			else if (action.equals("s"))
 			{
 				System.out.println(shoot());
 			}
@@ -55,7 +55,7 @@ public class GameGun
 
 	public static void reload()
 	{
-		if (bulletCount > magazineSize)
+		if (bulletCount >= magazineSize)
 		{
 			bulletCount -= magazineSize;
 			shotCount = magazineSize;
@@ -63,6 +63,7 @@ public class GameGun
 		else
 		{
 			shotCount = bulletCount;
+			bulletCount = 0;
 		}
 		resetMagazine();
 
@@ -76,7 +77,7 @@ public class GameGun
 	{
 		String output = "";
 
-		output += "Bullets:     " + bulletCount + "\n" + "Magazine:     ";
+		output += "Bullets:     " + bulletCount + "\n" + "Magazine:    ";
 		for (int i = 0; i < magazineSize; i++)
 		{
 			output += magazine[i];
