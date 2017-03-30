@@ -34,16 +34,16 @@ public class Satellite
         String printout = "\n\n" +
                 "==========================" + "\nStarting locations...";
 
-        for (int i = 0; i < locate.size(); i++)
+        for (Location aLocate1 : locate)
         {
-            printout += "\nLocation for " + locate.get(i).getID() + ": (" + getLocation(locate.get(i).getLoc()) + ")";
+            printout += "\nLocation for " + aLocate1.getID() + ": (" + getLocation(aLocate1.getLoc()) + ")";
         }
 
         printout += "\n\n" + "==========================" + "\nDistance from home...";
 
-        for (int i = 0; i < locate.size(); i++)
+        for (Location aLocate : locate)
         {
-            printout += "\nDistance for " + locate.get(i).getID() + ": (" + getDistance(locate.get(i).getLoc(), home) + ")";
+            printout += "\nDistance for " + aLocate.getID() + ": (" + getDistance(aLocate.getLoc(), home) + ")";
         }
 
         System.out.println(printout);
