@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdf9eeeb-67d6-4502-af18-593e6be95a7a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Magpie2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Magpie2/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="cdf9eeeb-67d6-4502-af18-593e6be95a7a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -551,12 +548,12 @@
       <workItem from="1493220446952" duration="2478000" />
       <workItem from="1493737150304" duration="5093000" />
       <workItem from="1494946239529" duration="323000" />
-      <workItem from="1495120224425" duration="862000" />
+      <workItem from="1495120224425" duration="948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8756000" />
+    <option name="totallyTimeSpent" value="8842000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
