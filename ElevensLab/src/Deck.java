@@ -6,11 +6,8 @@ import java.util.ArrayList;
  * It provides several operations including
  *      initialize, shuffle, deal, and check if empty.
  */
-public class Deck {
-
-	/**
-	 * cards contains all the cards in the deck.
-	 */
+public class Deck
+{
 	private List<Card> cards;
 
 	/**
@@ -29,8 +26,23 @@ public class Deck {
 	 * @param suits is an array containing all of the card suits.
 	 * @param values is an array containing all of the card point values.
 	 */
-	public Deck(String[] ranks, String[] suits, int[] values) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+	public Deck(String[] ranks, String[] suits, int[] values)
+	{
+		this.cards = new ArrayList<Card>();
+		int length = 0;
+
+//		if (ranks.length < suits.length && ranks.length > values.length)
+//			length = ranks.length;
+//		if (suits.length < ranks.length && suits.length > values.length)
+//			length = suits.length;
+//		if (values.length < ranks.length && values.length > suits.length)
+//			length = values.length;
+
+		for (int i = 0; i < ranks.length; i++)
+			this.cards.add(new Card(ranks[i], suits[i], values[i]));
+
+		size = this.cards.size();
+		this.shuffle();
 	}
 
 
@@ -40,7 +52,8 @@ public class Deck {
 	 */
 	public boolean isEmpty()
 	{
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		if (this.cards.size() == 0)
+			return true;
 		return false;
 	}
 
@@ -48,18 +61,24 @@ public class Deck {
 	 * Accesses the number of undealt cards in this deck.
 	 * @return the number of undealt cards in this deck.
 	 */
-	public int size() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		return 0;
+	public int size()
+	{
+		return this.cards.size();
 	}
 
 	/**
 	 * Randomly permute the given collection of cards
 	 * and reset the size to represent the entire deck.
 	 */
-	public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
-
+	public void shuffle()
+	{
+		for (int i = 0; i < this.size; i++)
+		{
+			int rand = (int)(Math.random() * (this.size));
+			Card temp = cards.get(i);
+			cards.set(i, cards.get(rand));
+			cards.set(rand, temp);
+		}
 	}
 
 	/**
@@ -69,9 +88,10 @@ public class Deck {
 	 */
 	public Card deal()
 	{
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		Card one = new Card("King", "Spades", 12);
-		return one;
+		if (this.isEmpty())
+			return null;
+		size--;
+		return cards.get(size);
 	}
 
 	/**
