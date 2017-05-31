@@ -28,21 +28,15 @@ public class Deck
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values)
 	{
-		this.cards = new ArrayList<Card>();
-		int length = 0;
-
-//		if (ranks.length < suits.length && ranks.length > values.length)
-//			length = ranks.length;
-//		if (suits.length < ranks.length && suits.length > values.length)
-//			length = suits.length;
-//		if (values.length < ranks.length && values.length > suits.length)
-//			length = values.length;
+		cards = new ArrayList<Card>();
 
 		for (int i = 0; i < ranks.length; i++)
-			this.cards.add(new Card(ranks[i], suits[i], values[i]));
-
-		size = this.cards.size();
-		this.shuffle();
+		{
+			for (String suitString : suits)
+				cards.add(new Card(ranks[i], suitString, values[i]));
+		}
+		size = cards.size();
+		shuffle();
 	}
 
 

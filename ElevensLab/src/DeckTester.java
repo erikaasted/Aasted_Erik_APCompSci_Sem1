@@ -17,19 +17,23 @@ public class DeckTester {
         String[] suits = new String[ranks.length];
         int[] points = new int[ranks.length];
 
-		for (int i = 0; i < 13; i++) {
+		for (int i = 0; i < 13; i++)
+		{
             suits[i] = "Spades";
             points[i] = 13 - i;
         }
-        for (int i = 0; i < 13; i++) {
+        for (int i = 0; i < 13; i++)
+        {
             suits[i+13] = "Hearts";
             points[i+13] = 13 - i;
         }
-        for (int i = 0; i < 13; i++) {
+        for (int i = 0; i < 13; i++)
+        {
             suits[i+26] = "Clubs";
             points[i+26] = 13 - i;
         }
-        for (int i = 0; i < 13; i++) {
+        for (int i = 0; i < 13; i++)
+        {
             suits[i+39] = "Diamonds";
             points[i+39] = 13 - i;
         }
